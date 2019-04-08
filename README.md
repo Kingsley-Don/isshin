@@ -19,7 +19,7 @@ $ yarn run dev
 ## Features
 
 - Next.js
-  - Head component support title template
+  - Head component supports title template
 - @babel
   - preset-env
   - polyfill
