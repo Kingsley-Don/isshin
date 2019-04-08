@@ -19,6 +19,7 @@ $ yarn run dev
 ## Features
 
 - Next.js
+  - Head component support title template
 - @babel
   - preset-env
   - polyfill
@@ -26,10 +27,12 @@ $ yarn run dev
 - postcss
   - preset-env
   - nested
+- normalize.css
 - eslint + prettier
 - husky + lint-staged
 
 ## Roadmap
 
+- deploy preset (now and heroku)
 - npx support like CRA 
 - typescript support 
