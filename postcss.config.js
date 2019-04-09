@@ -11,5 +11,6 @@ module.exports = {
       },
     }),
     require('postcss-nested'),
+    require('postcss-normalize'),
   ],
 }

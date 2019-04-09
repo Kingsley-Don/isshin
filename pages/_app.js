@@ -1,7 +1,7 @@
 import React from 'react'
 import App, {Container} from 'next/app'
 import Head from '../components/Head'
-import 'normalize.css'
+import '../styles/global.css'
 
 export default class Isshin extends App {
   static async getInitialProps({Component, ctx}) {

@@ -27,7 +27,7 @@ $ yarn run dev
 - postcss
   - preset-env
   - nested
-- normalize.css
+  - normalize
 - eslint + prettier
 - husky + lint-staged
 
