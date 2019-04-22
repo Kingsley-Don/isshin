@@ -26,7 +26,4 @@ module.exports = {
     'no-var': 2,
     'no-extra-semi': 0,
   },
-  settings: {
-    'import/resolver': 'webpack',
-  },
 }
