@@ -4,7 +4,7 @@
 <div align="center">
   <a href="https://www.pixiv.net/member.php?id=14591247">Image by 灼眼のSABER</a>
 </div>
-<h1 align="center">WIP: Isshin</h1>
+<h1 align="center">Isshin</h1>
 <p align="center">Next.js starter kit</p>
 
 ## Getting Started
@@ -14,6 +14,35 @@ $ git clone https://github.com/Kingsley-Don/isshin.git
 $ cd isshin
 $ yarn
 $ yarn run dev
+```
+
+## Auto-generate using template
+
+### Page
+
+```bash
+$ NAME=demo-page npm run new:page
+
+✅ ./pages/demo-page.js created.
+✅ ./pages/demo-page.css created.
+```
+
+### Component
+
+```bash
+$ NAME=Nav npm run new
+
+✅ ./components/Nav/Nav.js created.
+✅ ./components/Nav/index.js created.
+✅ ./components/Nav/Nav.css created.
+```
+
+### Without CSS
+
+```bash
+$ CSS=false NAME=Nav npm run new
+
+✅ ./components/Nav.js created.
 ```
 
 ## Features

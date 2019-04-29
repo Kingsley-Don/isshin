@@ -9,6 +9,7 @@ const replaceTitle = element => {
         children: TITLE_TEMPLATE.replace('%s', element.props.children),
       })
     } else {
+      // eslint-disable-next-line no-console
       console.warn('Warning: TITLE_TEMPLATE should include "%s".')
     }
   }
@@ -16,8 +17,8 @@ const replaceTitle = element => {
 }
 
 export default function Head({children}) {
+  // FIXME: hack way to set key
   const headChildren = Array.isArray(children)
-    // FIXME: hack way to set key
     ? children.map((element, index) => ({...replaceTitle(element), key: index}))
     : replaceTitle(children)
   return <NextHead>{headChildren}</NextHead>

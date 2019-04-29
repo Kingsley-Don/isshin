@@ -11,12 +11,15 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint:fix": "eslint . --fix --ignore-path .gitignore"
+    "lint:fix": "eslint . --fix --ignore-path .gitignore",
+    "new": "node new.js",
+    "new:page": "TYPE=page node new.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
+    "humps": "^2.0.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
