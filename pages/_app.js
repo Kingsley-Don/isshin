@@ -3,7 +3,7 @@ import App, {Container} from 'next/app'
 import Head from '../components/Head'
 import '../styles/global.css'
 
-export default class Isshin extends App {
+export default class NextApp extends App {
   static async getInitialProps({Component, ctx}) {
     let pageProps = {}
 

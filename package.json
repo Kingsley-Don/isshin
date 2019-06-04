@@ -2,7 +2,6 @@
   "name": "isshin",
   "version": "1.0.0",
   "description": "Next.js starter kit",
-  "main": "index.js",
   "repository": "git@github.com:kingsleydon/isshin.git",
   "author": "kingsleydon <tj971204@gmail.com>",
   "license": "MIT",
