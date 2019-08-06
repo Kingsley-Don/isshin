@@ -1,7 +1,10 @@
+const ERROR = 2
+const WARN = 1
+const OFF = 0
+
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
       legacyDecorators: true,
@@ -10,22 +13,40 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true,
   },
-  plugins: ['react', 'react-hooks', 'prettier', 'import'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'prettier', 'import'],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'prettier/react',
     'plugin:react/recommended',
     'plugin:import/recommended',
   ],
   rules: {
     'prettier/prettier': ['error', require('./prettier.config')],
-    'react/prop-types': 0,
-    'react/react-in-jsx-scope': 0,
-    'prefer-const': 2,
-    'no-var': 2,
-    'no-extra-semi': 0,
-    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-    'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
+    'react/prop-types': OFF,
+    'react/react-in-jsx-scope': OFF,
+    'prefer-const': ERROR,
+    'no-var': ERROR,
+    // 'no-extra-semi': 0,
+    'react-hooks/rules-of-hooks': ERROR,
+    'react-hooks/exhaustive-deps': WARN,
+    '@typescript-eslint/explicit-function-return-type': [
+      ERROR,
+      {
+        allowExpressions: true,
+        allowTypedFunctionExpressions: true,
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': ERROR,
+    '@typescript-eslint/explicit-member-accessibility': [ERROR, {accessibility: 'no-public'}],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 }

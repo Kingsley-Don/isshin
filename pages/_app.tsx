@@ -1,19 +1,10 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react'
 import App, {Container} from 'next/app'
-import Head from '../components/Head'
+import Head from 'next/head'
 import '../styles/global.css'
 
 export default class NextApp extends App {
-  static async getInitialProps({Component, ctx}) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return {pageProps}
-  }
-
   render() {
     const {Component, pageProps} = this.props
 
