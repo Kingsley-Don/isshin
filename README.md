@@ -6,6 +6,9 @@
 </div>
 <h1 align="center">Isshin</h1>
 <p align="center">Next.js starter kit</p>
+<div align="center">
+  <a href="https://github.com/kingsleydon/isshin/tree/typescript">TypeScript version</a>
+</div>
 
 ## Getting Started
 
@@ -63,5 +66,4 @@ $ CSS=false NAME=Nav npm run new
 ## Roadmap
 
 - deploy preset (now and heroku)
-- npx support like CRA 
-- typescript support 
+- npx support like CRA
