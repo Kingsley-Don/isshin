@@ -1,3 +1,5 @@
+const path = require('path')
+
 const ERROR = 2
 const WARN = 1
 const OFF = 0
@@ -13,6 +15,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es6: true,
   },
   plugins: ['@typescript-eslint', 'react', 'react-hooks', 'prettier', 'import'],
   extends: [
@@ -22,6 +25,7 @@ module.exports = {
     'prettier/react',
     'plugin:react/recommended',
     'plugin:import/recommended',
+    'plugin:import/typescript',
   ],
   rules: {
     'prettier/prettier': ['error', require('./prettier.config')],
@@ -29,7 +33,6 @@ module.exports = {
     'react/react-in-jsx-scope': OFF,
     'prefer-const': ERROR,
     'no-var': ERROR,
-    // 'no-extra-semi': 0,
     'react-hooks/rules-of-hooks': ERROR,
     'react-hooks/exhaustive-deps': WARN,
     '@typescript-eslint/explicit-function-return-type': [
@@ -40,12 +43,16 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-unused-vars': ERROR,
-    '@typescript-eslint/explicit-member-accessibility': [ERROR, {accessibility: 'no-public'}],
+    '@typescript-eslint/explicit-member-accessibility': [
+      ERROR,
+      {accessibility: 'no-public'},
+    ],
+    '@typescript-eslint/no-var-requires': OFF,
   },
   settings: {
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      webpack: {
+        config: path.resolve(__dirname, 'webpack.config.js'),
       },
     },
   },

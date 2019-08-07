@@ -10,9 +10,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint:fix": "eslint . --fix --ignore-path .gitignore",
-    "new": "node new.js",
-    "new:page": "TYPE=page node new.js"
+    "lint:fix": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -28,6 +26,7 @@
     "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
@@ -47,7 +46,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.(js|ts|tsx)": "eslint --fix"
   },
   "browserslist": "last 2 versions"
 }

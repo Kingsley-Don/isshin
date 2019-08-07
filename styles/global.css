@@ -1,6 +1,5 @@
-@import-normalize;
+@import 'sanitize.css';
 
 body {
-  margin: 0;
   font-family: sans-serif;
 }
